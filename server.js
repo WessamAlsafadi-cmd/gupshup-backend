@@ -92,6 +92,9 @@ async function requestNewPhoneNumberWithPartnerAPI(app_id) {
 // POST /bitrix24/install
 // Fixed Bitrix24 Install Handler
 // Flexible install handler that accepts both JSON and form data
+app.get('/bitrix24/install', (req, res) => {
+  res.status(200).send('Bitrix24 install endpoint is up.');
+});
 app.post('/bitrix24/install', async (req, res) => {
   console.log('Bitrix24 install request headers:', req.headers);
   console.log('Bitrix24 install request body:', req.body);
